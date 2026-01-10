@@ -831,6 +831,10 @@ figure {
   width: 100%;
   padding: 30px;
   float: right;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .fh5co-blog .blog-text span {
