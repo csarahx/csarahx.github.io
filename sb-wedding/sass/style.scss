@@ -678,13 +678,6 @@ figure {
 //Events
 .wedding-events{
 	background: $brand-white;
-	.ceremony-bg{
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		position: relative;
-		height: 400px;
-	}
 	.desc{
 		padding: 2em;
 		h3{
@@ -696,6 +689,23 @@ figure {
 			}
 		}
 	}
+}
+
+.ceremony-bg{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	height: 400px;
+}
+
+.directions-map{
+	height: 600px;
+	width: 100%;
+	margin-left: 0;
+	margin-right: -15px;
+	background-size: contain;
+	background-position: left center;
 }
 
 
