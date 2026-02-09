@@ -12,6 +12,22 @@
 *	Edit this section
 *
 * ======================================================= */
+.amp-flower {
+  width: 80px;      /* tweak to match old heart size */
+  height: auto;
+}
+
+#fh5co-logo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* space between heart + text */
+}
+
+.logo-flower {
+  width: 30px;      /* subtle, header-friendly size */
+  height: auto;
+}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -562,6 +578,10 @@ figure {
   margin-bottom: 3em;
 }
 
+#fh5co-colors .heading-section {
+  margin-bottom: 1.5em;
+}
+
 .heading-section h2 {
   font-size: 50px;
   font-weight: 300;
@@ -659,12 +679,21 @@ figure {
   background: #fff;
 }
 
-.wedding-events .ceremony-bg {
+.ceremony-bg {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   height: 400px;
+}
+
+.directions-map {
+  height: 600px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: -15px;
+  background-size: contain;
+  background-position: left center;
 }
 
 .wedding-events .desc {
@@ -901,8 +930,29 @@ figure {
 }
 
 #footer {
-  background: #C8A2C8;
-  padding: 60px 0 40px;
+  background-image: url(../images/lilacs.jpg);
+  background-size: cover;        /* fill the footer */
+  background-position: center;   /* center the image */
+  background-repeat: no-repeat;
+  min-height: 300px;
+  color: white; /* text contrast */
+  padding: 80px 0;
+}
+
+#footer {
+  position: relative;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* adjust opacity */
+}
+
+#footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 #footer p {
@@ -1282,21 +1332,40 @@ body {
 
     .palette {
       display: flex;
-      gap: 16px;
+      gap: 24px;
       justify-content: center;
+      flex-wrap: wrap;
       margin-bottom: 40px;
     }
 
+    .color-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .color-item:hover {
+      transform: translateY(-5px);
+    }
+
     .color-circle {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .color-circle:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transform: scale(1.05);
     }
 
     /* Wedding palette colors */
     .c1 { background: #F4EDE6; } /* ivory */
-    .c2 { background: #d3dccf; } /* champagne */
-    .c3 { background: #B7C4B2; } /* warm gold */
-    .c4 { background: #eed1ee; } /* sage */
+    .c2 { background: #d3dccf; } /* sage */
+    .c3 { background: #B7C4B2; } /* champagne */
+    .c4 { background: #eed1ee; } /* lilac */
     .c5 { background: #C8A2C8; } /* mocha */
